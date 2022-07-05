@@ -1,0 +1,85 @@
+---
+title: "Meeting"
+author: "Your Name"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: html_document
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+# library(minotaur)
+devtools::load_all()
+
+init_meeting()
+```
+
+<style>
+.sidenote,
+.marginnote {
+    float: right;
+    clear: right;
+    margin-right: -60%;
+    width: 50%;
+    margin-top: 0.3rem;
+    margin-bottom: 0;
+    font-size: 1.1rem;
+    line-height: 1.3;
+    vertical-align: baseline;
+    position: relative;
+}
+</style>
+
+## Attendees
+
+```{r}
+attendees <- list( 
+  holden  = attendee(
+    joined= 1000,
+    full_name = "James Holden",
+    initials = "JH",
+    notes = NULL),
+  nagata = attendee(
+    joined = 1000,
+    full_name = "Naomi Nagata", 
+    initials = "NN",
+    notes = NULL),
+  kamal = attendee(
+    joined = 1000,
+    full_name = "Alex Kamal",
+    initials = "AK",
+    notes = NULL),
+  burton = attendee(
+    joined = 1000,
+    full_name = "Amos Burton",
+    initials = "AB",
+    notes = NULL)
+  )
+
+
+init_attendees(attendees)
+attendee_table(attendees)
+
+```
+
+
+# Notes
+
+- `r jh` wants to spill some beans, `r nn` disagrees, and `r ak` just wants to fly.
+- `r decision("fix the ship")`
+- `r action("get more PDC rounds", "ab")`
+- `r action("figure out where to go", c("nn", "jh"))`
+
+# Decisions
+
+```{r}
+show_decisions()
+```
+
+
+# Action Points
+
+```{r}
+show_action_points()
+```
+

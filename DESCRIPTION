@@ -1,0 +1,14 @@
+Package: minotaur
+Title: A Collection Of Templates And Tools For Writing Minuted
+Version: 0.0.0.9000
+Authors@R: 
+    person("Michael", "Jones", , "michael.jones.gsy@gmail.com", role = c("aut", "cre"))
+Description: Writing minutes of a meeting can often be a time consuming task. This package provides an rmarkdown template and some tools to help you navigate the labyrinth of minute taking.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.0.0
+Imports: 
+    gt,
+    purrr,
+    tibble
