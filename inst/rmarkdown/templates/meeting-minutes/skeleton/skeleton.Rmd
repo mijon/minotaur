@@ -1,8 +1,10 @@
 ---
 title: "Meeting"
 author: "Your Name"
-date: "`r format(Sys.time(), '%d %B, %Y')`"
-output: html_document
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output:
+  minotaur::meeting_minutes:
+    css: default
 
 ---
 
@@ -19,18 +21,18 @@ init_meeting()
 .marginnote {
     float: right;
     clear: right;
-    margin-right: -60%;
+    margin-right: -40%;
     width: 50%;
     margin-top: 0.3rem;
     margin-bottom: 0;
-    font-size: 1.1rem;
+    font-size: 100%;
     line-height: 1.3;
     vertical-align: baseline;
     position: relative;
 }
 </style>
 
-## Attendees
+# Attendees
 
 ```{r}
 attendees <- list( 
@@ -72,12 +74,16 @@ attendee_table(attendees)
 
 # Decisions
 
+It was decided:
+
 ```{r}
 show_decisions()
 ```
 
 
 # Action Points
+
+A summary of the action points arising from this meeting:
 
 ```{r}
 show_action_points()
