@@ -7,8 +7,9 @@ Description: Writing minutes of a meeting can often be a time consuming task. Th
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.0.0
+RoxygenNote: 7.2.0
 Imports: 
     gt,
+    pagedown,
     purrr,
     tibble
